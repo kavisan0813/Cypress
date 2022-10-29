@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-10-26T08:27:54.638Z",
+    "end": "2022-10-26T08:28:28.346Z",
+    "duration": 33708,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c96e31e4-aee0-461c-8a96-264bef379181",
+      "title": "",
+      "fullFile": "cypress\\e2e\\1-getting-started\\sanjay.cy.js",
+      "file": "cypress\\e2e\\1-getting-started\\sanjay.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "passes",
+          "fullTitle": "passes",
+          "timedOut": null,
+          "duration": 19700,
+          "state": "passed",
+          "speed": "slow",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.fixture('data.json').then(data => {\n  for (var l in data) {\n    cy.visit('https://internshala.com');\n    cy.get('.navbar-nav > :nth-child(5) > .btn').click();\n    cy.get('#modal_email').type(data[l].email);\n    cy.get('#modal_password').type(data[l].password);\n    cy.get('#modal_login_submit').click();\n    cy.get('.profile_container_hover > .nav-link > .is_icon_header').click();\n    cy.get('#internships_new_superscript').click();\n  }\n});",
+          "err": {},
+          "uuid": "a68200cf-537f-43ed-9ac8-6946a409bb15",
+          "parentUUID": "c96e31e4-aee0-461c-8a96-264bef379181",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "fail",
+          "fullTitle": "fail",
+          "timedOut": null,
+          "duration": 8713,
+          "state": "passed",
+          "speed": "medium",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.fixture('data2.json').then(data => {\n  for (var l in data) {\n    cy.visit('https://internshala.com');\n    cy.get('.navbar-nav > :nth-child(5) > .btn').click();\n    cy.get('#modal_email').type(data[l].email);\n    cy.get('#modal_password').type(data[l].password);\n    cy.get('#modal_login_submit').click();\n  }\n});",
+          "err": {},
+          "uuid": "90674fa0-2915-4572-8b14-0d044a27cb8f",
+          "parentUUID": "c96e31e4-aee0-461c-8a96-264bef379181",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "a68200cf-537f-43ed-9ac8-6946a409bb15",
+        "90674fa0-2915-4572-8b14-0d044a27cb8f"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 28413,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
